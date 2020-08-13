@@ -1,0 +1,6 @@
+framework module NETURLSchemeHandler {
+  umbrella header "NETURLSchemeHandler-umbrella.h"
+
+  export *
+  module * { export * }
+}

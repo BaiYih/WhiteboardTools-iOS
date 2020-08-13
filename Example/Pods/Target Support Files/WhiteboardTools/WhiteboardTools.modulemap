@@ -1,0 +1,6 @@
+framework module WhiteboardTools {
+  umbrella header "WhiteboardTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,12 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_CONFIGURATION_BUILD_DIR}/FBSnapshotTestCase" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/NETURLSchemeHandler" "${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive" "${PODS_CONFIGURATION_BUILD_DIR}/Whiteboard" "${PODS_CONFIGURATION_BUILD_DIR}/WhiteboardTools" "${PODS_CONFIGURATION_BUILD_DIR}/YYModel" "${PODS_CONFIGURATION_BUILD_DIR}/dsBridge"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/NETURLSchemeHandler/NETURLSchemeHandler.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SSZipArchive/SSZipArchive.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Whiteboard/Whiteboard.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WhiteboardTools/WhiteboardTools.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/dsBridge/dsBridge.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -l"iconv" -l"z" -framework "AVFoundation" -framework "CoreFoundation" -framework "FBSnapshotTestCase" -framework "Foundation" -framework "Masonry" -framework "NETURLSchemeHandler" -framework "QuartzCore" -framework "SSZipArchive" -framework "Security" -framework "UIKit" -framework "WebKit" -framework "Whiteboard" -framework "WhiteboardTools" -framework "XCTest" -framework "YYModel" -framework "dsBridge"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
