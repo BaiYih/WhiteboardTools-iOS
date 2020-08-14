@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NETToolButton : UIButton
 
 @property (nonatomic, assign, readonly) NETToolModelType toolType;
-@property (nonatomic, assign) BOOL isSelect;
 
 - (void)setupWithType:(NETToolModelType)toolType imageName:(nullable NSString *)imageName;
 

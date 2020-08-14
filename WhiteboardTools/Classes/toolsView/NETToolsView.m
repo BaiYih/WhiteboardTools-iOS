@@ -38,19 +38,15 @@
         [toolButton setupWithType:toolModel.toolType imageName:toolModel.imageName];
         [toolButton addTarget:self action:@selector(actionTestButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addArrangedSubview:toolButton];
-        toolButton.showsTouchWhenHighlighted = YES;
-
     }
 }
 
 - (void)actionTestButton:(NETToolButton *)sender
 {
     if (self.currentSelectButton) {
-        self.currentSelectButton.isSelect = NO;
-//        self.currentSelectButton.selected = NO;
+        self.currentSelectButton.selected = NO;
     }
-    sender.isSelect = YES;
-//    sender.selected = YES;
+    sender.selected = YES;
     self.currentSelectButton = sender;
     
     switch (sender.toolType) {
@@ -100,6 +96,52 @@
             WhiteMemberState *mState = [[WhiteMemberState alloc] init];
             mState.currentApplianceName = ApplianceLaserPointer;
             [self.room setMemberState:mState];
+            break;
+        }
+        case NETToolModelTypeLaserEllipse:
+        {
+            NSLog(@"test~~~~~~  use Ellipse");
+            WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+            mState.currentApplianceName = ApplianceEllipse;
+            [self.room setMemberState:mState];
+            break;
+        }
+        case NETToolModelTypeLaserRectangle:
+        {
+            NSLog(@"test~~~~~~  use Laser Rectangle");
+            WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+            mState.currentApplianceName = ApplianceRectangle;
+            [self.room setMemberState:mState];
+            break;
+        }
+        case NETToolModelTypeLaserStraight:
+        {
+            NSLog(@"test~~~~~~  use Straight");
+            WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+            mState.currentApplianceName = ApplianceStraight;
+            [self.room setMemberState:mState];
+            break;
+        }
+        case NETToolModelTypeLaserHand:
+        {
+            NSLog(@"test~~~~~~  use Hand");
+            WhiteMemberState *mState = [[WhiteMemberState alloc] init];
+            mState.currentApplianceName = ApplianceHand;
+            [self.room setMemberState:mState];
+            break;
+        }
+        case NETToolModelTypeLaserGeometric:
+        {
+            NSLog(@"test~~~~~~  use Geometric");
+            NSLog(@"几何图形展开功能");
+
+            break;
+        }
+        case NETToolModelTypeLaserMore:
+        {
+            NSLog(@"test~~~~~~  use More");
+            NSLog(@"展开更多");
+            
             break;
         }
         default:

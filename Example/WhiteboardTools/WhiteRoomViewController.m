@@ -72,7 +72,7 @@
          make.centerX.equalTo(self.view.mas_centerX);
          make.bottom.equalTo(self.view.mas_bottom).offset(-30);
          make.height.equalTo(@(50));
-         make.width.equalTo(@(250));
+         make.width.equalTo(self.view.mas_width);
      }];
      
      NETToolModel *toolModel1 = [[NETToolModel alloc] init];
@@ -93,8 +93,25 @@
      NETToolModel *toolModel6 = [[NETToolModel alloc] init];
      toolModel6.toolType = NETToolModelTypeLaserPointer;
 
+     NETToolModel *toolModel7 = [[NETToolModel alloc] init];
+     toolModel7.toolType = NETToolModelTypeLaserEllipse;
+        
+     NETToolModel *toolModel8 = [[NETToolModel alloc] init];
+     toolModel8.toolType = NETToolModelTypeLaserRectangle;
+    
+     NETToolModel *toolModel9 = [[NETToolModel alloc] init];
+     toolModel9.toolType = NETToolModelTypeLaserStraight;
+    
+     NETToolModel *toolModel10 = [[NETToolModel alloc] init];
+     toolModel10.toolType = NETToolModelTypeLaserHand;
+    
+     NETToolModel *toolModel11 = [[NETToolModel alloc] init];
+     toolModel11.toolType = NETToolModelTypeLaserGeometric;
+    
+     NETToolModel *toolModel12 = [[NETToolModel alloc] init];
+     toolModel12.toolType = NETToolModelTypeLaserMore;
      
-     NSArray *tools = @[toolModel1, toolModel2, toolModel3, toolModel4, toolModel5, toolModel6];
+     NSArray *tools = @[toolModel1, toolModel2, toolModel3, toolModel4, toolModel5, toolModel6, toolModel7, toolModel8, toolModel9, toolModel10, toolModel11, toolModel12];
      [self.toolsView setupTools:tools];
 }
 

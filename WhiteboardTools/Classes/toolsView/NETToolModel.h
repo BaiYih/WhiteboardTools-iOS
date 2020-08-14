@@ -16,7 +16,13 @@ typedef NS_ENUM(NSInteger, NETToolModelType) {
     NETToolModelTypeText,             //文本
     NETToolModelTypeEraser,           //橡皮擦
     NETToolModelTypeArrow,            //箭头
-    NETToolModelTypeLaserPointer      //激光笔
+    NETToolModelTypeLaserPointer,     //激光笔
+    NETToolModelTypeLaserEllipse,     //椭圆
+    NETToolModelTypeLaserRectangle,   //矩形
+    NETToolModelTypeLaserStraight,    //直线
+    NETToolModelTypeLaserHand,        //抓手
+    NETToolModelTypeLaserGeometric,   //几何图形，用于展开选择更多图形
+    NETToolModelTypeLaserMore         //更多
 };
 
 @interface NETToolModel : NSObject

@@ -14,7 +14,13 @@ NSString *NETToolModelTypeIconMap[] = {
     [NETToolModelTypeText] = @"text",
     [NETToolModelTypeEraser] = @"eraser",
     [NETToolModelTypeArrow] = @"arrow",
-    [NETToolModelTypeLaserPointer] = @"laser"
+    [NETToolModelTypeLaserPointer] = @"laser",
+    [NETToolModelTypeLaserEllipse] = @"circle",
+    [NETToolModelTypeLaserRectangle] = @"shape",
+    [NETToolModelTypeLaserStraight] = @"line",
+    [NETToolModelTypeLaserHand] = @"grab",
+    [NETToolModelTypeLaserGeometric] = @"geometric",
+    [NETToolModelTypeLaserMore] = @"more"
 };
 
 NSString *NETToolModelTypeHighlightIconMap[] = {
@@ -23,43 +29,38 @@ NSString *NETToolModelTypeHighlightIconMap[] = {
     [NETToolModelTypeText] = @"text-pressed",
     [NETToolModelTypeEraser] = @"eraser-pressed",
     [NETToolModelTypeArrow] = @"arrow-pressed",
-    [NETToolModelTypeLaserPointer] = @"laser-pressed"
+    [NETToolModelTypeLaserPointer] = @"laser-pressed",
+    [NETToolModelTypeLaserEllipse] = @"circle-pressed",
+    [NETToolModelTypeLaserRectangle] = @"shape-pressed",
+    [NETToolModelTypeLaserStraight] = @"line-pressed",
+    [NETToolModelTypeLaserHand] = @"grab-pressed",
+    [NETToolModelTypeLaserGeometric] = @"geometric-pressed",
+    [NETToolModelTypeLaserMore] = @"more-pressed"
 };
 
 @interface NETToolButton ()
 
 @property (nonatomic, assign, readwrite) NETToolModelType toolType;
 
-@property (nonatomic, strong) NSArray *iconArray;
-@property (nonatomic, strong) NSArray *highlightIconArray;
-
 @end
 
 @implementation NETToolButton
-
-- (void)setIsSelect:(BOOL)isSelect
-{
-    _isSelect = isSelect;
-    NSString *iconName;
-    if (isSelect) {
-        iconName = NETToolModelTypeHighlightIconMap[self.toolType];
-    } else {
-        iconName = NETToolModelTypeIconMap[self.toolType];
-    }
-    [self setImage:[UIImage imageNamed:iconName] forState:UIControlStateNormal];
-}
 
 - (void)setupWithType:(NETToolModelType)toolType imageName:(nullable NSString *)imageName
 {
     _toolType = toolType;
 
     NSString *iconName;
-    if (imageName.length && self.iconArray.count > toolType) {
+    NSString *highligIconName;
+    if (imageName.length) {
         iconName = imageName;
     } else {
         iconName = NETToolModelTypeIconMap[toolType];
     }
+    
     [self setImage:[UIImage imageNamed:iconName] forState:UIControlStateNormal];
+    [self setImage:[UIImage imageNamed:iconName] forState:UIControlStateHighlighted];
+    [self setImage:[UIImage imageNamed:highligIconName] forState:UIControlStateSelected];
 }
 
 /*
