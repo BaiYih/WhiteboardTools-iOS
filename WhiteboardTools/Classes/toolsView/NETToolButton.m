@@ -46,21 +46,39 @@ NSString *NETToolModelTypeHighlightIconMap[] = {
 
 @implementation NETToolButton
 
-- (void)setupWithType:(NETToolModelType)toolType imageName:(nullable NSString *)imageName
+- (void)setupWithType:(NETToolModelType)toolType icon:(nullable UIImage *)icon selectIcon:(UIImage *)selectIcon
 {
     _toolType = toolType;
 
-    NSString *iconName;
-    NSString *highligIconName;
-    if (imageName.length) {
-        iconName = imageName;
+    if (icon || selectIcon) {
+        UIImage *iconImage;
+        UIImage *selectIconImage;
+        iconImage = icon ? icon : selectIcon;
+        selectIconImage = selectIcon ? selectIcon : icon;
+        
+        [self setImage:iconImage forState:UIControlStateNormal];
+        [self setImage:iconImage forState:UIControlStateHighlighted];
+        [self setImage:selectIcon forState:UIControlStateSelected];
     } else {
+        NSString *iconName;
+        NSString *highligIconName;
         iconName = NETToolModelTypeIconMap[toolType];
+        highligIconName = NETToolModelTypeHighlightIconMap[toolType];
+        
+        NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath
+                                    stringByAppendingPathComponent:@"/WhiteboardTools.bundle"];
+        NSBundle *resource_bundle = [NSBundle bundleWithPath:bundlePath];
+        UIImage *icon = [UIImage imageNamed:iconName
+                                        inBundle:resource_bundle
+                   compatibleWithTraitCollection:nil];
+        UIImage *highligIcon = [UIImage imageNamed:highligIconName
+                                        inBundle:resource_bundle
+                   compatibleWithTraitCollection:nil];
+        
+        [self setImage:icon forState:UIControlStateNormal];
+        [self setImage:icon forState:UIControlStateHighlighted];
+        [self setImage:highligIcon forState:UIControlStateSelected];
     }
-    
-    [self setImage:[UIImage imageNamed:iconName] forState:UIControlStateNormal];
-    [self setImage:[UIImage imageNamed:iconName] forState:UIControlStateHighlighted];
-    [self setImage:[UIImage imageNamed:highligIconName] forState:UIControlStateSelected];
 }
 
 /*

@@ -67,51 +67,55 @@
     
     NSLog(@"add tools view");
      
-     self.toolsView.backgroundColor = [UIColor orangeColor];
-     [self.toolsView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.toolsView.backgroundColor = [UIColor orangeColor];
+    [self.toolsView mas_makeConstraints:^(MASConstraintMaker *make) {
          make.centerX.equalTo(self.view.mas_centerX);
          make.bottom.equalTo(self.view.mas_bottom).offset(-30);
          make.height.equalTo(@(50));
          make.width.equalTo(self.view.mas_width);
-     }];
+    }];
      
-     NETToolModel *toolModel1 = [[NETToolModel alloc] init];
-     toolModel1.toolType = NETToolModelTypeSelector;
-    
-     NETToolModel *toolModel2 = [[NETToolModel alloc] init];
-     toolModel2.toolType = NETToolModelTypePencil;
-     
-     NETToolModel *toolModel3 = [[NETToolModel alloc] init];
-     toolModel3.toolType = NETToolModelTypeText;
-     
-     NETToolModel *toolModel4 = [[NETToolModel alloc] init];
-     toolModel4.toolType = NETToolModelTypeEraser;
-     
-     NETToolModel *toolModel5 = [[NETToolModel alloc] init];
-     toolModel5.toolType = NETToolModelTypeArrow;
-     
-     NETToolModel *toolModel6 = [[NETToolModel alloc] init];
-     toolModel6.toolType = NETToolModelTypeLaserPointer;
+    NETToolModel *toolModel1 = [[NETToolModel alloc] init];
+    toolModel1.toolType = NETToolModelTypeSelector;
+//    toolModel1.icon = [UIImage imageNamed:@"test_cursor"];
+//    toolModel1.selectIcon = [UIImage imageNamed:@"test_cursor-pressed"];
 
-     NETToolModel *toolModel7 = [[NETToolModel alloc] init];
-     toolModel7.toolType = NETToolModelTypeLaserEllipse;
-        
-     NETToolModel *toolModel8 = [[NETToolModel alloc] init];
-     toolModel8.toolType = NETToolModelTypeLaserRectangle;
-    
-     NETToolModel *toolModel9 = [[NETToolModel alloc] init];
-     toolModel9.toolType = NETToolModelTypeLaserStraight;
-    
-     NETToolModel *toolModel10 = [[NETToolModel alloc] init];
-     toolModel10.toolType = NETToolModelTypeLaserHand;
-    
-     NETToolModel *toolModel11 = [[NETToolModel alloc] init];
-     toolModel11.toolType = NETToolModelTypeLaserGeometric;
-    
-     NETToolModel *toolModel12 = [[NETToolModel alloc] init];
-     toolModel12.toolType = NETToolModelTypeLaserMore;
+    NETToolModel *toolModel2 = [[NETToolModel alloc] init];
+    toolModel2.toolType = NETToolModelTypePencil;
      
-     NSArray *tools = @[toolModel1, toolModel2, toolModel3, toolModel4, toolModel5, toolModel6, toolModel7, toolModel8, toolModel9, toolModel10, toolModel11, toolModel12];
+    NETToolModel *toolModel3 = [[NETToolModel alloc] init];
+    toolModel3.toolType = NETToolModelTypeText;
+     
+    NETToolModel *toolModel4 = [[NETToolModel alloc] init];
+    toolModel4.toolType = NETToolModelTypeEraser;
+     
+    NETToolModel *toolModel5 = [[NETToolModel alloc] init];
+    toolModel5.toolType = NETToolModelTypeArrow;
+//    toolModel5.icon = [UIImage imageNamed:@"test_arrow"];
+     
+    NETToolModel *toolModel6 = [[NETToolModel alloc] init];
+    toolModel6.toolType = NETToolModelTypeLaserPointer;
+
+    NETToolModel *toolModel7 = [[NETToolModel alloc] init];
+    toolModel7.toolType = NETToolModelTypeLaserEllipse;
+
+    NETToolModel *toolModel8 = [[NETToolModel alloc] init];
+    toolModel8.toolType = NETToolModelTypeLaserRectangle;
+
+    NETToolModel *toolModel9 = [[NETToolModel alloc] init];
+    toolModel9.toolType = NETToolModelTypeLaserStraight;
+
+    NETToolModel *toolModel10 = [[NETToolModel alloc] init];
+    toolModel10.toolType = NETToolModelTypeLaserHand;
+//    toolModel10.selectIcon = [UIImage imageNamed:@"test_hand-pressed"];
+
+    NETToolModel *toolModel11 = [[NETToolModel alloc] init];
+    toolModel11.toolType = NETToolModelTypeLaserGeometric;
+
+    NETToolModel *toolModel12 = [[NETToolModel alloc] init];
+    toolModel12.toolType = NETToolModelTypeLaserMore;
+     
+    NSArray *tools = @[toolModel1, toolModel2, toolModel3, toolModel4, toolModel5, toolModel6, toolModel7, toolModel8, toolModel9, toolModel10, toolModel11, toolModel12];
      [self.toolsView setupTools:tools];
 }
 

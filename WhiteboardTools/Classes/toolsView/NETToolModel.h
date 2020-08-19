@@ -28,7 +28,8 @@ typedef NS_ENUM(NSInteger, NETToolModelType) {
 @interface NETToolModel : NSObject
 
 @property (nonatomic, assign) NETToolModelType toolType;
-@property (nonatomic, copy, nullable) NSString *imageName;
+@property (nonatomic, strong, nullable) UIImage *icon;
+@property (nonatomic, strong, nullable) UIImage *selectIcon;
 
 @end
 

@@ -35,7 +35,7 @@
         }
         
         NETToolButton *toolButton = [[NETToolButton alloc] initWithFrame:CGRectZero];
-        [toolButton setupWithType:toolModel.toolType imageName:toolModel.imageName];
+        [toolButton setupWithType:toolModel.toolType icon:toolModel.icon selectIcon:toolModel.selectIcon];
         [toolButton addTarget:self action:@selector(actionTestButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addArrangedSubview:toolButton];
     }

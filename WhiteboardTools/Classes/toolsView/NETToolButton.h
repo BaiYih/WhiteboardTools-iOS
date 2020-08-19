@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly) NETToolModelType toolType;
 
-- (void)setupWithType:(NETToolModelType)toolType imageName:(nullable NSString *)imageName;
+- (void)setupWithType:(NETToolModelType)toolType icon:(nullable UIImage *)icon selectIcon:(UIImage *)selectIcon;
 
 @end
 

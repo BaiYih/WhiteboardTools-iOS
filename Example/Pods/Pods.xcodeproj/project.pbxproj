@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9D2981C11F869E7FCBCC38C1893F82 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		003A3E380E720C3A9022114DCC745260 /* grab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63ACE41F5EC03F15A6B14486BA44A9CB /* grab@2x.png */; };
 		01F032F6D4BFD5E10D99900F1E9B4289 /* mz_zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 15355773D53663756CA166FB951AB8D9 /* mz_zip.c */; };
 		01F4771D9D1156DEB5D6791D4E8B2196 /* mz_os.h in Headers */ = {isa = PBXBuildFile; fileRef = F617D24C599A06ABE6D3211E9A610EC3 /* mz_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		039670CD94B5DBFFD9E83DE3DB99F333 /* main.b56bdfbf.js in Resources */ = {isa = PBXBuildFile; fileRef = C3025AFF65A4E98A2466CE99BC893BA7 /* main.b56bdfbf.js */; };
 		0568CABCB100C763131C3DFBD6C15EFA /* WhiteCombinePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = AF816DC3ADBAF78BDF499FF13B2DDC5E /* WhiteCombinePlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A040F35BF1C88F869404E1A940B493 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 56ADFC144DB6B14E34ABEF7C95D86175 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05EA1447EEA0EB669F8DEE73964A7C60 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6252BA063574C753EEEAAD3CDE2E33 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };

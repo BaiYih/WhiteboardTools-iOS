@@ -18,7 +18,7 @@
 //#define WhiteAppIdentifier @"792/uaYcRG0I7ctP9A"
 ////有 UUID 和 RoomToken 时，只要不在输入栏填写 UUID，WhiteSDKToken 就不会被使用，直接写空占位，保证不报错即可。
 ////如果在这里有填写任意值，WhiteUtils.m 中的值，就不会被使用
-//#define WhiteSDKToken @""
+#define WhiteSDKToken @""
 #define WhiteRoomUUID @""
 #define WhiteRoomToken @""
 

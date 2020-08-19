@@ -17,6 +17,12 @@
 		21C237C224E51A4700426D2F /* PlayerCommandListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C237B524E51A4600426D2F /* PlayerCommandListController.m */; };
 		21C237C324E51A4700426D2F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C237BA24E51A4700426D2F /* StartViewController.m */; };
 		21C237C524E51AFF00426D2F /* WhiteboardTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C237C424E51AFF00426D2F /* WhiteboardTools.framework */; };
+		21ECF1E424ED202100046879 /* test_cursor-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ECF1DE24ED202000046879 /* test_cursor-pressed@2x.png */; };
+		21ECF1E524ED202100046879 /* test_hand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ECF1DF24ED202000046879 /* test_hand@2x.png */; };
+		21ECF1E624ED202100046879 /* test_cursor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ECF1E024ED202000046879 /* test_cursor@2x.png */; };
+		21ECF1E724ED202100046879 /* test_arrow-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ECF1E124ED202000046879 /* test_arrow-pressed@2x.png */; };
+		21ECF1E824ED202100046879 /* test_hand-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ECF1E224ED202000046879 /* test_hand-pressed@2x.png */; };
+		21ECF1E924ED202100046879 /* test_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21ECF1E324ED202100046879 /* test_arrow@2x.png */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -63,6 +69,12 @@
 		21C237BA24E51A4700426D2F /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		21C237BB24E51A4700426D2F /* WhiteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteUtils.h; sourceTree = "<group>"; };
 		21C237C424E51AFF00426D2F /* WhiteboardTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WhiteboardTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21ECF1DE24ED202000046879 /* test_cursor-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_cursor-pressed@2x.png"; sourceTree = "<group>"; };
+		21ECF1DF24ED202000046879 /* test_hand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_hand@2x.png"; sourceTree = "<group>"; };
+		21ECF1E024ED202000046879 /* test_cursor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_cursor@2x.png"; sourceTree = "<group>"; };
+		21ECF1E124ED202000046879 /* test_arrow-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_arrow-pressed@2x.png"; sourceTree = "<group>"; };
+		21ECF1E224ED202000046879 /* test_hand-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_hand-pressed@2x.png"; sourceTree = "<group>"; };
+		21ECF1E324ED202100046879 /* test_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test_arrow@2x.png"; sourceTree = "<group>"; };
 		21EDA270262607F8212AD957 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2BCD0E646EA3B59352E4283C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3EA8E0349548E7F25D3B38BF /* Pods_WhiteboardTools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiteboardTools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +134,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21ECF1DD24ED202000046879 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				21ECF1DE24ED202000046879 /* test_cursor-pressed@2x.png */,
+				21ECF1DF24ED202000046879 /* test_hand@2x.png */,
+				21ECF1E024ED202000046879 /* test_cursor@2x.png */,
+				21ECF1E124ED202000046879 /* test_arrow-pressed@2x.png */,
+				21ECF1E224ED202000046879 /* test_hand-pressed@2x.png */,
+				21ECF1E324ED202100046879 /* test_arrow@2x.png */,
+			);
+			path = Image;
+			sourceTree = SOURCE_ROOT;
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +185,7 @@
 		6003F593195388D20070C39A /* Example for WhiteboardTools */ = {
 			isa = PBXGroup;
 			children = (
+				21ECF1DD24ED202000046879 /* Image */,
 				21C237B824E51A4600426D2F /* PlayerCommandListController.h */,
 				21C237B524E51A4600426D2F /* PlayerCommandListController.m */,
 				21C237B324E51A4500426D2F /* RoomCommandListController.h */,
@@ -324,8 +350,14 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				21ECF1E924ED202100046879 /* test_arrow@2x.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				21ECF1E724ED202100046879 /* test_arrow-pressed@2x.png in Resources */,
+				21ECF1E624ED202100046879 /* test_cursor@2x.png in Resources */,
+				21ECF1E524ED202100046879 /* test_hand@2x.png in Resources */,
+				21ECF1E824ED202100046879 /* test_hand-pressed@2x.png in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				21ECF1E424ED202100046879 /* test_cursor-pressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
